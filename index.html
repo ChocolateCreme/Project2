@@ -115,7 +115,7 @@
 
       const id = Number(li.dataset.id);
       const item = items.find(i => i.id === id);
-      if (item.done) {
+      if (!item) return{
         item.done = !item.done;
         render();
       }
